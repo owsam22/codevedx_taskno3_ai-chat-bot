@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Helpdesk</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<body>
+
+    
+
+<div class="app">
+
+    <div class="sidebar">
+
+        <div class="logo">
+            AI Helpdesk
+        </div>
+
+        <div class="company-info">
+            Internal Support Assistant
+        </div>
+
+        <div class="features">
+            <p>HR Support</p>
+            <p>Leave Policies</p>
+            <p>IT Helpdesk</p>
+            <p>Payroll Queries</p>
+        </div>
+
+    </div>
+
+    <div class="main-chat">
+
+        <div class="chat-header">
+
+            <div class="avatar">
+                AI
+            </div>
+
+            <div>
+                <h3>Company Assistant</h3>
+                <span>Online</span>
+            </div>
+
+        </div>
+
+        <div id="chat-box">
+
+            <div class="welcome">
+
+                <h2>
+                    Welcome to Internal AI Assistant
+                </h2>
+
+                <p>
+                    Ask HR, IT, Payroll, Leave or Company Policy questions.
+                </p>
+
+            </div>
+
+        </div>
+<div class="suggestions">
+
+<button onclick="quickAsk('What is leave policy?')">
+Leave Policy
+</button>
+
+<button onclick="quickAsk('How to reset password?')">
+Reset Password
+</button>
+
+<button onclick="quickAsk('Office timings')">
+Office Timing
+</button>
+
+<button onclick="quickAsk('Contact HR')">
+HR Contact
+</button>
+
+</div>
+        <div class="input-area">
+
+            <input
+                id="message"
+                placeholder="Ask anything..."
+            >
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+
+</body>
+</html>
