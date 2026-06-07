@@ -1,0 +1,619 @@
+{
+  "intents": [
+
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi", "Hello", "Hey", "Good morning", "Good afternoon", "Good evening",
+        "Howdy", "What's up", "Hiya", "Greetings", "Hello there", "Hey there",
+        "Hi bot", "Hello chatbot", "Anyone there?", "Is anyone available?"
+      ],
+      "responses": [
+        "Hello! Welcome to the Internal Helpdesk. How can I assist you today?",
+        "Hi there! I'm your helpdesk assistant. What do you need help with?",
+        "Hey! I'm here to help. What's your question?"
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye", "Goodbye", "See you", "See you later", "Take care",
+        "I'm done", "That's all", "Thanks, bye", "Okay bye", "Catch you later",
+        "I'm leaving", "Quit", "Exit", "End chat", "Close"
+      ],
+      "responses": [
+        "Goodbye! Have a great day. Feel free to return if you need more help.",
+        "Take care! The helpdesk is always here if you need us.",
+        "Bye! Hope I was able to help you today."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks", "Thank you", "That helped", "Great, thanks", "Awesome thanks",
+        "Thanks a lot", "Much appreciated", "That's helpful", "You're helpful",
+        "Good answer", "Perfect", "That's what I needed", "Cheers", "ty"
+      ],
+      "responses": [
+        "You're welcome! Let me know if there's anything else.",
+        "Happy to help! Is there anything else you need?",
+        "Glad I could assist! Don't hesitate to ask if you have more questions."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "reset_password",
+      "patterns": [
+        "I forgot my password",
+        "How do I reset my password?",
+        "Can't log in to my account",
+        "Password reset",
+        "I need a new password",
+        "My password is not working",
+        "Password expired",
+        "Change my password",
+        "I am locked out of my account",
+        "Reset my login credentials",
+        "I cannot remember my password",
+        "Password reset link not received",
+        "How to change password",
+        "Update my password",
+        "Login not working due to password"
+      ],
+      "responses": [
+        "To reset your password: \n1. Go to the company login portal.\n2. Click 'Forgot Password' below the login form.\n3. Enter your registered work email.\n4. Check your inbox for a reset link (valid for 30 minutes).\n5. Follow the link to set a new password.\n\nIf you don't receive the email within 5 minutes, check your spam folder or contact IT at it-support@company.com."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "account_locked",
+      "patterns": [
+        "My account is locked",
+        "Account locked out",
+        "Too many failed login attempts",
+        "I've been locked out",
+        "Account disabled",
+        "Cannot access my account",
+        "System says account is locked",
+        "Login blocked",
+        "Account suspended",
+        "I entered wrong password too many times"
+      ],
+      "responses": [
+        "Your account may be locked after 5 failed login attempts for security.\n\nTo unlock:\n1. Wait 15 minutes for auto-unlock, OR\n2. Contact IT Support immediately at it-support@company.com or call extension 1001.\n3. Provide your Employee ID and Manager's name for verification.\n\nIT will unlock your account within 30 minutes during business hours (9am–6pm, Mon–Fri)."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "new_employee_setup",
+      "patterns": [
+        "I am a new employee",
+        "New joiner setup",
+        "Just joined the company",
+        "First day setup",
+        "New employee account creation",
+        "How do I get started as a new employee?",
+        "Onboarding help",
+        "Set up my workstation",
+        "New hire IT setup",
+        "Account not created for new employee",
+        "I just joined, what do I need to set up?",
+        "New staff IT checklist"
+      ],
+      "responses": [
+        "Welcome to the team! Here's your new employee IT checklist:\n\n✅ Step 1: Collect your credentials from IT (Employee ID + Temp Password)\n✅ Step 2: Log into the company portal at portal.company.com\n✅ Step 3: Change your temporary password immediately\n✅ Step 4: Set up Multi-Factor Authentication (MFA) via the Authenticator App\n✅ Step 5: Install required software (see IT Software List on the intranet)\n✅ Step 6: Set up your company email in Outlook\n✅ Step 7: Connect to company Wi-Fi using your Employee ID\n\nFor hardware issues (laptop, accessories), contact IT at extension 1001 or visit the IT Helpdesk room on Floor 2."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "vpn_access",
+      "patterns": [
+        "How do I connect to VPN?",
+        "VPN not working",
+        "VPN setup",
+        "Remote access",
+        "Work from home VPN",
+        "Can't connect to company network remotely",
+        "VPN disconnects frequently",
+        "VPN login failed",
+        "Access company systems from home",
+        "Install VPN client",
+        "Set up remote desktop",
+        "VPN slow",
+        "Which VPN should I use?"
+      ],
+      "responses": [
+        "To connect to the Company VPN:\n\n1. Download the VPN client: Cisco AnyConnect (available on the IT portal > Software Downloads)\n2. Install and open the application\n3. Server address: vpn.company.com\n4. Login with your Employee ID and company password\n5. Approve the MFA push notification on your phone\n\n🔴 Common Issues:\n• VPN keeps disconnecting → Check your internet speed (minimum 10 Mbps required)\n• Login failed → Ensure MFA app is synced to correct time\n• Can't reach internal sites → Restart VPN client and try again\n\nFor persistent issues, email vpn-support@company.com with your Employee ID and error screenshot."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "software_installation",
+      "patterns": [
+        "How do I install software?",
+        "I need a software installed",
+        "Software request",
+        "Install Microsoft Office",
+        "Need Zoom installed",
+        "Software not installed on my laptop",
+        "Request new software",
+        "How to install company tools",
+        "Application installation help",
+        "Can I install software myself?",
+        "Software approval process",
+        "Need Python installed",
+        "Need VS Code on my system"
+      ],
+      "responses": [
+        "Software Installation Process:\n\n📦 Pre-approved software (install yourself):\n→ Go to IT Portal > Software Center > select the software > click Install\n→ Available tools: MS Office, Teams, Zoom, Slack, Chrome, VS Code, Python, Git\n\n📋 Software not in the list (requires approval):\n1. Submit a Software Request via ServiceDesk portal at helpdesk.company.com\n2. Fill in: Software Name, Business Justification, License Cost (if any)\n3. Your manager will approve the request\n4. IT will install within 2–3 business days after approval\n\n⚠️ Note: Do NOT install unlicensed or personal software on company devices. It violates IT policy."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "wifi_connection",
+      "patterns": [
+        "How do I connect to office Wi-Fi?",
+        "Wi-Fi not working",
+        "Internet not working in office",
+        "Wi-Fi password",
+        "Connect to company network",
+        "Office internet slow",
+        "No internet connection",
+        "Laptop not connecting to Wi-Fi",
+        "Network connection issue",
+        "Can't find company Wi-Fi",
+        "Wi-Fi keeps dropping"
+      ],
+      "responses": [
+        "Company Wi-Fi Setup:\n\n📶 Network Name (SSID): CORP-OFFICE\n🔐 Authentication: Use your Employee ID and company password\n\nConnection Steps:\n1. Click the Wi-Fi icon on your taskbar\n2. Select 'CORP-OFFICE' from the network list\n3. Enter your Employee ID as the username\n4. Enter your company account password\n5. Accept the security certificate if prompted\n\n🔴 Troubleshooting:\n• Wi-Fi not visible → Restart laptop Wi-Fi adapter (Fn + F2 on most laptops)\n• Authentication failed → Ensure your password isn't expired\n• Slow internet → Move closer to access point or call IT at ext. 1001\n• Guest Wi-Fi for visitors: CORP-GUEST (Password: Welcome@123, changed monthly)"
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "email_setup",
+      "patterns": [
+        "How do I set up my work email?",
+        "Email not working",
+        "Outlook not receiving emails",
+        "Configure email on phone",
+        "Set up Outlook",
+        "Email account setup",
+        "Work email on mobile",
+        "Add company email to phone",
+        "Outlook configuration settings",
+        "Email keeps asking for password",
+        "Cannot send emails",
+        "Email account not created"
+      ],
+      "responses": [
+        "Company Email Setup (Outlook):\n\n💻 On Desktop:\n1. Open Outlook → File → Add Account\n2. Enter your work email: yourname@company.com\n3. Outlook will auto-detect settings\n4. Enter your company password and approve MFA\n\n📱 On Mobile (Outlook App):\n1. Download 'Microsoft Outlook' from App Store / Play Store\n2. Open → Add Account → Enter work email\n3. Choose 'Work or School Account'\n4. Sign in with your Employee ID and password\n5. Approve MFA prompt\n\nEmail Server Settings (manual setup):\n• Incoming: imap.company.com | Port: 993 | SSL: ON\n• Outgoing: smtp.company.com | Port: 587 | TLS: ON\n\nFor email not received issues, check Junk/Spam folder first. For persistent issues, raise a ticket at helpdesk.company.com."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "leave_balance",
+      "patterns": [
+        "How many leaves do I have?",
+        "Check my leave balance",
+        "Remaining leave days",
+        "How to check leaves?",
+        "Annual leave balance",
+        "How many sick leaves left?",
+        "Leave quota",
+        "Show my leave details",
+        "PTO balance",
+        "Casual leave remaining",
+        "How many days off do I have?"
+      ],
+      "responses": [
+        "To check your leave balance:\n\n1. Log into the HR Portal at hr.company.com\n2. Navigate to My Profile → Leave Management\n3. You'll see a breakdown of:\n   • Annual Leave (Earned Leave)\n   • Sick Leave\n   • Casual Leave\n   • Compensatory Off\n\n📅 Leave Year: April 1 – March 31\n📌 Unused earned leaves (up to 30 days) carry forward to next year\n📌 Sick and casual leaves lapse if unused\n\nFor discrepancies in your leave balance, contact HR at hr@company.com with your Employee ID."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "apply_leave",
+      "patterns": [
+        "How to apply for leave?",
+        "Apply for sick leave",
+        "Request leave",
+        "Take a day off",
+        "Apply annual leave",
+        "Submit leave application",
+        "Leave request process",
+        "How to request time off?",
+        "Book a holiday",
+        "How do I apply for vacation?",
+        "Emergency leave application",
+        "Apply for maternity leave",
+        "Apply for paternity leave"
+      ],
+      "responses": [
+        "How to Apply for Leave:\n\n1. Log in to HR Portal at hr.company.com\n2. Go to Leave Management → Apply Leave\n3. Select leave type: Annual / Sick / Casual / Comp-off / Special\n4. Choose From Date and To Date\n5. Add reason (mandatory for sick/special leaves)\n6. Click Submit → Your manager receives an approval request\n\n📋 Leave Rules:\n• Annual Leave: Apply at least 3 days in advance\n• Sick Leave: Can apply same day with medical certificate for absences >2 days\n• Emergency Leave: Call/message your manager directly, apply in system later\n• Half-day leave: Select 'Half Day' option and choose AM or PM session\n\nLeave approval status appears in HR Portal under Leave History."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "payslip",
+      "patterns": [
+        "How to download payslip?",
+        "Get my salary slip",
+        "Payslip not available",
+        "When is payslip released?",
+        "Download salary statement",
+        "I need my payslip",
+        "Where can I find my payslip?",
+        "Salary slip for visa",
+        "Payslip for bank loan",
+        "Monthly salary statement"
+      ],
+      "responses": [
+        "Accessing Your Payslip:\n\n1. Login to HR Portal → hr.company.com\n2. Go to Payroll → Payslip / Salary Statement\n3. Select Month and Year\n4. Click Download PDF\n\n📅 Payslip Availability: Payslips are available on the 1st of every month for the previous month's salary.\n\n💰 Salary Credit Date: Last working day of each month\n\nFor queries on deductions, taxes, or salary discrepancies, email payroll@company.com with your Employee ID and the specific issue.\n\nFor Form 16 (annual tax certificate), it's available in HR Portal > Tax Documents every June."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "reimbursement",
+      "patterns": [
+        "How to submit expense reimbursement?",
+        "Claim travel expenses",
+        "Submit bills for reimbursement",
+        "Office expense claim",
+        "How to get reimbursed?",
+        "Expense report submission",
+        "Claim food allowance",
+        "Submit medical bills",
+        "Internet reimbursement work from home",
+        "How long does reimbursement take?",
+        "Expense approval process"
+      ],
+      "responses": [
+        "Expense Reimbursement Process:\n\n1. Log in to HR Portal → Finance → Expense Claims\n2. Click 'New Expense Claim'\n3. Fill in:\n   • Expense Category (Travel / Food / Medical / Internet / Other)\n   • Amount\n   • Date of Expense\n   • Purpose / Description\n4. Upload scanned receipts (JPG or PDF, max 5MB each)\n5. Submit for manager approval\n\n📋 Policy Limits:\n• Local Travel (cab/auto): Up to ₹500/day with receipt\n• Outstation Travel: As per travel policy (see HR Portal > Policies)\n• Food during official duty: Up to ₹300/meal\n• Medical: Up to ₹15,000/year (with receipts)\n• WFH Internet: Up to ₹1,000/month\n\n⏱ Reimbursement timeline: Approved claims are processed within 7 working days and credited to your salary account."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "attendance",
+      "patterns": [
+        "How to mark attendance?",
+        "Attendance not marked",
+        "Regularize attendance",
+        "Missed punching",
+        "Attendance correction",
+        "How to check attendance?",
+        "WFH attendance",
+        "Biometric not working",
+        "Mark attendance from home",
+        "Late attendance marking",
+        "How does attendance work?"
+      ],
+      "responses": [
+        "Attendance System Guide:\n\n🏢 Office Attendance:\n• Use the biometric scanner at the entrance on arrival and departure\n• Also visible in HR Portal under Attendance > Monthly View\n\n🏠 Work from Home Attendance:\n1. Login to HR Portal → Attendance → Mark WFH\n2. Select date and click 'Mark Present – WFH'\n3. Must be done before 10:30 AM\n\n🔧 Attendance Correction (missed punch):\n1. HR Portal → Attendance → Regularization Request\n2. Select the date, enter in/out times, add reason\n3. Manager approves within 24 hours\n\n📌 Note: More than 3 unregularized absences per month may affect salary. Queries: hr@company.com"
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "hardware_issue",
+      "patterns": [
+        "My laptop is not working",
+        "Computer crashed",
+        "Screen is black",
+        "Laptop won't turn on",
+        "Hardware problem",
+        "Mouse not working",
+        "Keyboard not working",
+        "Laptop overheating",
+        "Battery draining fast",
+        "Monitor not displaying",
+        "Printer not working",
+        "USB ports not working",
+        "Hardware replacement request",
+        "My laptop is slow"
+      ],
+      "responses": [
+        "Hardware Issue Support:\n\n🔴 Immediate Steps:\n• Laptop won't turn on: Hold power button 10 seconds → wait 30 seconds → press power again\n• Black screen: Check monitor cable → try Fn + F4 to switch display\n• Overheating: Ensure ventilation, use on hard surface, not on bed/lap\n• Slow laptop: Restart the system, check for Windows updates, close unused apps\n\n🛠 To Raise a Hardware Ticket:\n1. Go to helpdesk.company.com\n2. Click 'New Ticket' → Category: Hardware\n3. Describe the issue and attach a photo if possible\n4. Severity:\n   - Critical (can't work at all) → Response in 2 hours\n   - High (partial work) → Response in 4 hours\n   - Medium/Low → Response by next business day\n\nFor urgent issues, call IT at extension 1001 or walk to IT Helpdesk on Floor 2."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "printer_setup",
+      "patterns": [
+        "How to connect to office printer?",
+        "Printer not found",
+        "Add a printer",
+        "Print not working",
+        "Printer setup",
+        "How to print documents?",
+        "Printer offline",
+        "Printer driver installation",
+        "Color printer location",
+        "Network printer setup"
+      ],
+      "responses": [
+        "Office Printer Setup:\n\n🖨 Add Printer on Windows:\n1. Go to Settings → Devices → Printers & Scanners\n2. Click 'Add a Printer or Scanner'\n3. Select your floor printer from the list (e.g., PRN-FL3-HP for Floor 3)\n4. Driver installs automatically\n\n🍎 Add Printer on Mac:\n1. System Preferences → Printers & Scanners → '+'\n2. Select the printer from the list\n3. Click Add\n\n📍 Printer Locations by Floor:\n• Floor 1: Reception Area (B&W + Color)\n• Floor 2: Near Pantry (B&W only)\n• Floor 3: Conference Room corridor (Color)\n• Floor 4: HR Department (B&W)\n\n⚠ Printer Offline fix: Restart the printer using the power button, then try printing again. If issue persists, raise a ticket at helpdesk.company.com."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "meeting_room_booking",
+      "patterns": [
+        "Book a meeting room",
+        "Conference room reservation",
+        "Reserve a room for meeting",
+        "Meeting room available?",
+        "How to book a conference room?",
+        "Room booking system",
+        "Cancel meeting room booking",
+        "Which rooms are free?",
+        "Book boardroom",
+        "Large meeting room for team",
+        "Audio visual room booking"
+      ],
+      "responses": [
+        "Meeting Room Booking:\n\n📅 How to Book:\n1. Go to the intranet → Room Booking OR use Outlook Calendar\n2. In Outlook: New Event → Add Location → Browse Rooms\n3. Select room based on floor and capacity\n4. Add meeting details and invite attendees\n5. Send the invite — the room is auto-reserved\n\n🏢 Available Rooms:\n• Atlas (Floor 1) – Capacity: 20 | AV: Yes | Video call: Yes\n• Nexus (Floor 2) – Capacity: 8 | Whiteboard: Yes\n• Orion (Floor 3) – Capacity: 4 | Ideal for interviews\n• Zenith (Floor 4) – Capacity: 30 | Boardroom | AV: Full setup\n\n⏱ Booking Rules:\n• Max booking: 4 hours at a time\n• Cancel at least 30 minutes before to free the room\n• No-shows after 15 minutes release the room automatically\n\nFor AV setup support, contact facilities@company.com."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "access_permissions",
+      "patterns": [
+        "I need access to a folder",
+        "Request file access",
+        "Access denied error",
+        "Permission to access system",
+        "SharePoint access request",
+        "I can't open a file",
+        "Grant me access to a drive",
+        "Network drive access",
+        "Request CRM access",
+        "Need access to HR system",
+        "Access to shared folder",
+        "Database access request",
+        "Remove access for an employee"
+      ],
+      "responses": [
+        "Access & Permissions Request:\n\n📋 How to Request Access:\n1. Go to helpdesk.company.com → New Request → Access Management\n2. Fill in:\n   • System/Folder/Application name\n   • Type of access needed (Read / Edit / Full Control)\n   • Business reason\n3. Your manager will receive an approval notification\n4. IT provisions access within 1 business day after approval\n\n🔐 Common Access Types:\n• Network Drive (G: / H: drive) → IT team provisions\n• SharePoint / Teams channel → Owner adds directly\n• CRM / ERP system → Application Admin + Manager approval\n• Cloud storage (OneDrive) → Auto-provisioned on account creation\n\n⛔ Access Removal (for resigned/transferred employees):\n• Managers must raise a 'Revoke Access' ticket immediately on employee's last day."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "data_backup",
+      "patterns": [
+        "How to back up my data?",
+        "Data backup policy",
+        "Lost my files",
+        "File recovery",
+        "Accidental file deletion",
+        "Restore deleted files",
+        "OneDrive backup",
+        "My files are missing",
+        "Can I recover a deleted document?",
+        "Backup my work files",
+        "How often is data backed up?"
+      ],
+      "responses": [
+        "Data Backup & Recovery:\n\n☁ Automatic Backup:\n• All files saved in OneDrive or SharePoint are automatically backed up continuously\n• Company policy: Save all work files to OneDrive — not to the local C: drive\n\n🔄 Recover Accidentally Deleted Files:\n• OneDrive: Go to onedrive.com → Recycle Bin → Restore (within 30 days)\n• Emails: Outlook → Deleted Items → Recover Deleted Items from Server\n• Local files (C: drive): Right-click folder → Restore Previous Versions (if enabled)\n\n🗄 IT Backup Schedule:\n• Server data: Backed up daily at midnight\n• Retention: 30 days rolling backup\n\n⚠ For critical data loss (ransomware, major corruption), contact IT immediately at it-support@company.com or call extension 1001. Do NOT restart the system — it may overwrite recoverable data."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "office_timings",
+      "patterns": [
+        "What are the office timings?",
+        "Working hours",
+        "Office opening time",
+        "Office closing time",
+        "What time does office open?",
+        "Flexible working hours",
+        "Core hours",
+        "Work from home policy timings",
+        "Shift timings",
+        "Overtime policy"
+      ],
+      "responses": [
+        "Office Timings:\n\n🕘 Standard Working Hours:\n• Monday to Friday: 9:00 AM – 6:00 PM\n• Saturday: 9:00 AM – 1:00 PM (as per project requirement)\n• Sunday: Holiday\n\n⏱ Core Hours (mandatory presence/login):\n• 10:00 AM – 4:00 PM (all employees must be available)\n\n🔁 Flexible Working:\n• Flexi-time allowed between 8:00 AM – 9:00 PM window\n• Complete 9 hours/day including 1-hour lunch break\n• Must be approved by your reporting manager\n\n🏠 WFH Policy:\n• Up to 2 days WFH per week (as per team policy)\n• WFH days require manager approval in advance via HR Portal\n\n🌙 Overtime: Overtime is compensated as Comp-off, approved by department head. No monetary OT unless on a special project agreement."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "holiday_list",
+      "patterns": [
+        "What are the holidays this year?",
+        "Company holiday list",
+        "National holidays",
+        "Public holidays",
+        "When is the next holiday?",
+        "Diwali holiday",
+        "Holi holiday",
+        "Festival holiday",
+        "Bank holidays for office",
+        "Holiday calendar 2024"
+      ],
+      "responses": [
+        "Company Holiday List (2024):\n\n📅 Mandatory Public Holidays:\n1. Republic Day – January 26 (Friday)\n2. Holi – March 25 (Monday)\n3. Good Friday – March 29 (Friday)\n4. Ambedkar Jayanti – April 14 (Sunday)\n5. Labour Day – May 1 (Wednesday)\n6. Independence Day – August 15 (Thursday)\n7. Gandhi Jayanti – October 2 (Wednesday)\n8. Dussehra – October 12 (Saturday)\n9. Diwali – November 1 (Friday)\n10. Christmas – December 25 (Wednesday)\n\n📋 Restricted Holidays (choose 2 from the optional list):\n• Eid, Navratri, Raksha Bandhan, Guru Nanak Jayanti, Pongal, Onam\n\nFull list available on HR Portal → Holiday Calendar 2024.\nFor shift employees, holidays may differ — check with your team lead."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "id_card",
+      "patterns": [
+        "I lost my ID card",
+        "ID card not working",
+        "Request new ID card",
+        "Access card replacement",
+        "Visitor ID card",
+        "ID card issue",
+        "Entry badge not working",
+        "How to get ID card?",
+        "Temporary access card",
+        "Gate pass"
+      ],
+      "responses": [
+        "ID Card / Access Card Issues:\n\n🪪 Lost or Damaged ID Card:\n1. Report immediately to Admin at admin@company.com or extension 1005\n2. Fill the 'ID Card Replacement' form on the intranet\n3. A temporary access card will be issued within the same day\n4. New permanent card is ready in 3 working days\n5. ₹200 fee for replacement (deducted from salary)\n\n🔴 Card Not Working at Entry Gate:\n• Contact Security desk at the main entrance\n• They will issue a Visitor Pass temporarily\n• Raise a ticket at helpdesk.company.com > Category: Admin > ID Card Issue\n\n👤 New Employee ID Card:\n• HR initiates this during Day 1 onboarding\n• If not received within 3 days of joining, email hr@company.com\n\n📸 For card update (photo/name change after marriage etc.):\nEmail admin@company.com with updated photo and supporting document."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "canteen_menu",
+      "patterns": [
+        "What's on the menu today?",
+        "Cafeteria menu",
+        "Canteen food today",
+        "Office canteen timings",
+        "What does the canteen serve?",
+        "Is there vegetarian food?",
+        "Lunch menu",
+        "Breakfast options in office",
+        "Office food",
+        "Canteen prices"
+      ],
+      "responses": [
+        "Office Canteen / Cafeteria:\n\n🍽 Timings:\n• Breakfast: 8:00 AM – 10:00 AM\n• Lunch: 12:30 PM – 2:30 PM\n• Snacks/Tea: 4:00 PM – 5:00 PM\n\n🥗 Daily Menu is posted every morning on:\n• Intranet Home Page → Canteen Menu\n• Canteen Notice Board (Ground Floor)\n• Company WhatsApp group\n\n💰 Pricing:\n• Breakfast combo: ₹40–₹60\n• Full Lunch (Veg): ₹70 | (Non-Veg): ₹90\n• Snacks: ₹20–₹40\n\n🥦 Special Requirements:\n• Veg/Non-veg options available daily\n• For dietary needs (diabetic, gluten-free), inform canteen staff 1 day in advance\n\nPayment: Via canteen card (load money at reception) or UPI. Cash not accepted."
+      ],
+      "context": ""
+    },
+    {
+  "tag": "bot_name",
+  "patterns": [
+    "What is your name",
+    "Who are you",
+    "What's your name",
+    "Tell me your name"
+  ],
+  "responses": [
+    "I am the Internal Knowledge Assistant.",
+    "I'm the company AI assistant.",
+    "I'm your Employee Support AI."
+  ]
+},
+
+    {
+      "tag": "training_programs",
+      "patterns": [
+        "How to enroll in training?",
+        "Available training programs",
+        "Skill development courses",
+        "Online training",
+        "Learning and development",
+        "Certifications offered by company",
+        "Register for a workshop",
+        "L&D programs",
+        "Technical training",
+        "Soft skills training",
+        "How to get certified?"
+      ],
+      "responses": [
+        "Training & Learning Programs:\n\n📚 How to Enroll:\n1. Login to HR Portal → Learning & Development\n2. Browse available courses by category (Technical / Soft Skills / Compliance / Leadership)\n3. Click 'Enroll' on your chosen course\n4. Manager notification is sent automatically for approval\n\n🎓 Types of Programs:\n• Online Courses: Self-paced via Coursera / LinkedIn Learning (company subscription)\n• Internal Workshops: Monthly sessions by senior staff (schedule on intranet)\n• External Certifications: PMP, AWS, Azure, etc. – Company reimburses up to ₹25,000/year with bond condition\n• Mandatory Compliance Training: POSH, Data Privacy, Code of Conduct (annual)\n\n📝 Certification Reimbursement:\n• Submit course completion certificate + invoice to HR\n• Bond: 12 months continued employment post certification\n\nQueries: learning@company.com"
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "grievance",
+      "patterns": [
+        "How to file a grievance?",
+        "Register a complaint",
+        "Workplace issue",
+        "I have a complaint",
+        "Harassment complaint",
+        "Raise a concern",
+        "POSH complaint",
+        "Report misconduct",
+        "Discrimination complaint",
+        "Ethics violation",
+        "Whistleblower policy",
+        "Report my manager",
+        "Anonymous complaint"
+      ],
+      "responses": [
+        "Grievance & Complaint Process:\n\n📋 Step 1 – Try informal resolution:\n• Talk to your direct manager or HR Business Partner first\n• Most issues can be resolved informally at this stage\n\n📝 Step 2 – Formal Grievance:\n1. Go to HR Portal → Grievance Management → File New Grievance\n2. Describe the issue in detail\n3. Select category: HR / IT / Admin / Harassment / Ethics\n4. Submit — HR acknowledges within 24 hours\n5. Resolution timeline: 15 working days\n\n🔒 POSH (Prevention of Sexual Harassment):\n• Contact ICC (Internal Complaints Committee) at icc@company.com\n• Anonymous complaints accepted\n• Your identity is strictly protected\n\n🕵 Whistleblower / Ethics Violations:\n• Ethics Hotline: 1800-XXX-XXXX (toll-free, anonymous)\n• Email: ethics@company.com\n\n⚠ All complaints are treated with strict confidentiality. Retaliation against complainants is prohibited."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "promotion_appraisal",
+      "patterns": [
+        "When is the appraisal?",
+        "Promotion process",
+        "Performance review",
+        "How are appraisals done?",
+        "Salary increment process",
+        "Rating system",
+        "Annual review",
+        "KRA / KPI submission",
+        "How to fill performance review?",
+        "Appraisal cycle"
+      ],
+      "responses": [
+        "Performance Appraisal Cycle:\n\n📅 Timeline:\n• Goal Setting: April – May (beginning of financial year)\n• Mid-year Review: October\n• Annual Appraisal: January – March\n• Increment Effective: April 1st\n\n📝 Process:\n1. Self-appraisal form opens in HR Portal in January\n2. Fill in your achievements against KRAs set at year start\n3. Manager review and rating\n4. HR normalisation\n5. Results communicated by March end\n\n⭐ Rating Scale:\n• 5 – Outstanding | 4 – Exceeds Expectations | 3 – Meets Expectations\n• 2 – Needs Improvement | 1 – Underperformance\n\n💰 Increment Range (approximate):\n• Rating 5: 15–20% | Rating 4: 10–15% | Rating 3: 7–10%\n• Rating 1–2: No increment (PIP may be initiated)\n\nFor promotion queries, speak directly with your manager or HR BP."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "resignation",
+      "patterns": [
+        "How to resign?",
+        "Notice period",
+        "Resignation process",
+        "I want to leave the company",
+        "Submit resignation letter",
+        "Notice period buyout",
+        "Exit process",
+        "Last working day",
+        "Resignation acceptance",
+        "Full and final settlement",
+        "Exit interview"
+      ],
+      "responses": [
+        "Resignation & Exit Process:\n\n📝 How to Resign:\n1. Email your formal resignation to your manager and hr@company.com\n2. State your intended last working day based on notice period\n3. HR will send an acknowledgment within 2 business days\n\n⏱ Notice Period:\n• 0–1 year service: 1 month notice\n• 1–3 years service: 2 months notice\n• 3+ years service: 3 months notice\n\n💳 Notice Buyout:\n• You can pay salary in lieu to reduce notice (subject to management approval)\n• HR calculates the buyout amount\n\n✅ Exit Checklist:\n• Return laptop, ID card, access card to IT/Admin\n• Clear all pending leaves or encash (as per policy)\n• No-dues clearance from IT, Finance, Admin, and Manager\n• Exit interview with HR\n\n💰 Full & Final Settlement:\n• Processed within 45 days of last working day\n• Includes: Balance salary, Leave encashment, Gratuity (if eligible), PF transfer\n\nContact hr@company.com for all exit-related queries."
+      ],
+      "context": ""
+    },
+
+    {
+      "tag": "fallback",
+      "patterns": [
+        "I don't understand",
+        "Can you help me with something else?",
+        "That's not what I meant",
+        "I need human support",
+        "Talk to a real person",
+        "Connect me to IT",
+        "Connect me to HR",
+        "Speak to an agent",
+        "Transfer to human"
+      ],
+      "responses": [
+        "I'm sorry, I didn't quite understand that. Here's how you can get human support:\n\n🖥 IT Support: it-support@company.com | Ext. 1001\n👤 HR Support: hr@company.com | Ext. 1002\n🏢 Admin: admin@company.com | Ext. 1005\n📋 Raise a Ticket: helpdesk.company.com\n\nYou can also try rephrasing your question and I'll do my best to help!"
+      ],
+      "context": ""
+    }
+
+  ]
+}
