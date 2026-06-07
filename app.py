@@ -38,6 +38,7 @@ model = load_model(
     'chatbot_model.h5',compile=False
 )
 
+
 def clean(sentence):
 
     sentence_words = nltk.word_tokenize(
